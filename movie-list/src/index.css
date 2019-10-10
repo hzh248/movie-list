@@ -1,0 +1,260 @@
+body {
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App{
+  
+  width: 425px;
+  height: 100%;
+  margin: auto;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 150;
+}
+
+.menu--visible {
+  pointer-events: auto;
+}
+
+.app-menu {
+  background-color: #fff;
+  color: #fff;
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+    height: 100%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    -webkit-transform: translateX(-103%);
+            transform: translateX(-103%);
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+    z-index: 160;
+    pointer-events: auto;            
+}
+
+.menu--visible .app-menu {
+    -webkit-transform: none;
+            transform: none;
+}
+
+.menu--animatable .app-menu {
+  transition: all 130ms ease-in;
+}
+
+.menu--visible.menu--animatable  .app-menu {
+  transition: all 330ms ease-out;
+}
+
+/*
+.menu:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  will-change: opacity;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0,0,0.3,1);
+}
+*/
+
+.menu--visible.menu:after {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* aux */
+
+body {
+margin: 0;
+}
+
+.layout {
+margin-top: 20px;
+width: 100%;
+height: 100%;
+background-color:Cornsilk;
+position: relative;
+}
+
+.header {
+  background-color:Cornsilk;
+}
+
+.menu-icon {
+  content: "Menu";
+  color:black;
+  background-color: Cornsilk;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.app-menu {
+  width: 300px;
+  height: 667px;
+  box-shadow: none;
+  background-color: #ddd;
+}
+
+.menu:after {
+  width: 375px;
+  height: 667px;
+}
+
+.poster{
+  width: 100%;
+ 
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.poster img{
+  width: 50%;
+  height: auto;
+  margin: auto;
+}
+
+.poster div{
+  margin: auto;
+}
+
+#Home{
+  width: 100%;
+  height: 2000px;
+}
+
+#SortBar{
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  background-color: CornflowerBlue ; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  
+  margin: 1px 1px;
+  cursor: pointer;
+}
+
+#Pagination{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#Pagination button{
+  margin: 3px;
+}
+
+.Name_wrapper{
+  align-content: center;
+  width: 41%;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+
+.Name_wrapper img{
+  width: 10%;
+  height: auto;
+}
+
+.like_btn{
+  background-color: red;
+  border: none;
+  padding: 5px 8px;
+  cursor: pointer;
+  margin: 5px 8px;
+}
+
+.block_btn{
+  background-color: light grey;
+  border: none;
+  padding: 5px 8px;
+  cursor: pointer;
+  margin: 5px 8px;
+}
+
+#LikedList{
+  width: 100%;
+  height: 4000px;
+}
+
+#BlockedList{
+  width: 100%;
+  height: 4000px;
+}
+
+.movie_collection{
+  box-sizing: border-box;
+  position: relative;
+  width: 45%;
+  display: inline-block;
+  margin: 10px;
+}
+
+.movie_collection img{
+  width: 100%;
+  height: 285px;
+  cursor: pointer;
+}
+
+.like_footer{
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  background-color: Cornsilk;
+  bottom: 0;
+  z-index: -1;
+
+}
+
+.like_footer img{
+  width: auto;
+  height: 70%;
+  margin-top: 4%;
+  background-color: cornsilk;
+}
+
+.movie_collection:hover .like_footer{
+  z-index: 2;
+}
